@@ -3,7 +3,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="bootstrap.css">
+<link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="bootstrap-theme.css">
 <script src="angular.js"></script>
 <script src="ui-bootstrap.js"></script>
@@ -13,9 +13,18 @@
 <div class="container" ng-app="app">
   <div ng-controller="main-controller">
     <h1>Hello, {{name}}!!</h1>
+  <form>
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-addon"><i class="glyphicon glyphicon-search"></i></div>
+        <input type="text" class="form-control" placeholder="Search Lines" ng-model="searchLine">
+      </div>      
+    </div>
+  </form>
+  {{searchLine}}
     <table class="table table-striped">
-      <tr><th>ID</th><th>Descrizione</th></tr>
-      <tr ng-repeat="line in lines">
+      <tr><th>ID</th><th>Description</th></tr>
+      <tr ng-repeat="line in lines | filter:searchLine">
         <td>{{line.line}}</td><td>{{line.desc}}</td>
       </tr>
     </table>

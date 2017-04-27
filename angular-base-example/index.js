@@ -9,6 +9,10 @@ angular.module('app', [])
     {
     "line": "41",
     "desc": "circolare, via Pannunzio (Stazione Lingotto) - via Orbassano (Beinasco-Borgaretto)"
+    },
+    {
+    "line": "36S",
+    "desc": "Speciale Stabilimento, via De Amicis stazione Fermi Metropolitana (Collegno) - via Pavia (Rivoli)"
     }
   ];
 });

@@ -15,6 +15,8 @@ ln -s node_modules/angular/angular.js .
 
 ## Add Bootstrap UI
 
+No need for bootstrap.js and jquery.js that are "wrapped" in BootstrapUI, but we need bootstrap.css
+
 ```
 npm install angular-ui-bootstrap --save
 ln -s node_modules/angular-ui-bootstrap/dist//ui-bootstrap-tpls.js ui-bootstrap.js
